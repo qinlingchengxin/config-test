@@ -3,6 +3,8 @@ spring:
     active: dev
 server:
   port: 9000
+my:
+ name: nanmeiying-normal
 ---
 spring:
   profiles: dev
@@ -10,11 +12,15 @@ spring:
     name: provider-dev
 server:
   port: 9001
+my:
+ name: nanmeiying-dev
 ---
 
 spring:
   profiles: test
   application:
-    name: provider-test-2
+    name: provider-test
 server:
   port: 9002    
+my:
+ name: nanmeiying-test
