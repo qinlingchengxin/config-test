@@ -13,4 +13,4 @@ spring:
 spring:
   profiles: test
   application:
-    name: provider-test
+    name: provider-test-2
