@@ -1,0 +1,21 @@
+server:
+  port: 9999
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: zuul-gateway
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+spring:
+  application:
+    name: zuul-gateway
+
+zuul:
+  routes:
+    pp.serviceId: provider
+    pp.path: /p/**
+  #  ignore-local-service: true
+  ignored-services: provider
+  prefix: /hello
